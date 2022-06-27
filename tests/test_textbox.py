@@ -1,6 +1,5 @@
-from selene import be, have
+from selene import have
 from selene.support.shared import browser
-from selene.support.shared.jquery_style import s
 
 
 def test_submit_form():
@@ -10,7 +9,7 @@ def test_submit_form():
     browser.element('#lastName').type('enchikov')
     browser.element('#userEmail').type('ivanov@gmail.com')
     browser.element('[for=gender-radio-1]').click()
-    browser.element('#userNumber').type('88005553535')
+    browser.element('#userNumber').type('8800555353')
     browser.element('#dateOfBirthInput').click()
     browser.element('option[value="6"]').click()
     browser.element('option[value="1992"]').click()
@@ -29,11 +28,11 @@ def test_submit_form():
         'enchik enchikov',
         'ivanov@gmail.com',
         'Male',
-        '88005553535',
+        '8800555353',
         '27 July,1992',
         'English',
         'Music',
         'nebo.jpg',
         'Novosibirsk',
-        'Rajasthan Jaiselmer',
+        'Rajasthan Jaiselmer'
     ))
