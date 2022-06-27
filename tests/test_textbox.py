@@ -16,15 +16,15 @@ def test_submit_form():
     browser.element('.react-datepicker__day--027').click()
     browser.element('#subjectsInput').type('English').press_tab()
     browser.element('[for="hobbies-checkbox-3"]').click()
-    browser.element('#uploadPicture').type("/home/pimenov/PycharmProjects/demoqa-test/tests/nebo.jpg")
+    browser.element('#uploadPicture').type("/home/pimenov/PycharmProjects/demoqa-test/nebo.jpg")
     browser.execute_script("document.querySelector('#app > footer').style.display='none'")
     browser.element('#currentAddress').type('Novosibirsk')
     browser.element('#state input').type('Rajasthan').press_tab()
     browser.element('#city input').type('Jaiselmer').press_tab()
     browser.element('#submit').click()
 
-    browser.element('#example-modal-sizes-title-lg').should(have.exact_text('Thanks for submitting the form'))
-    browser.all('tbody').should(have.exact_texts(
+    browser.element('.modal-title').should(have.exact_text('Thanks for submitting the form'))
+    browser.all("table tr").should(have.exact_texts(
         'enchik enchikov',
         'ivanov@gmail.com',
         'Male',
