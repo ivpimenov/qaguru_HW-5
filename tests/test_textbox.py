@@ -25,14 +25,15 @@ def test_submit_form():
 
     browser.element('.modal-title').should(have.exact_text('Thanks for submitting the form'))
     browser.all("table tr").should(have.exact_texts(
-        'enchik enchikov',
-        'ivanov@gmail.com',
-        'Male',
-        '8800555353',
-        '27 July,1992',
-        'English',
-        'Music',
-        'nebo.jpg',
-        'Novosibirsk',
-        'Rajasthan Jaiselmer'
+        'Label Values',
+        'Student Name enchik enchikov',
+        'Student Email ivanov@gmail.com',
+        'Gender Male',
+        'Mobile 8800555353',
+        'Date of Birth 27 July,1992',
+        'Subjects English',
+        'Hobbies Music',
+        'Picture nebo.jpg',
+        'Address Novosibirsk',
+        'State and City Rajasthan Jaiselmer'
     ))
