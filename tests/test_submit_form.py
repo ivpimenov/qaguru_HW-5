@@ -2,7 +2,7 @@ from selene import have
 from selene.support.shared import browser
 
 
-def test_submit_form():
+def test_submit_form(browser_management):
     browser.open('/automation-practice-form')
 
     browser.element('#firstName').type('enchik')
